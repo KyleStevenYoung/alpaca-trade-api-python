@@ -2,7 +2,7 @@ from alpaca_trade_api import StreamConn
 from alpaca_trade_api.common import URL
 
 
-ALPACA_API_KEY = "<YOUR-API-KEY>"
+ALPACA_API_KEY = "<YOUR-API-KEY>" 
 ALPACA_SECRET_KEY = "<YOUR-SECRET-KEY>"
 USE_POLYGON = False
 
@@ -14,7 +14,7 @@ if __name__ == '__main__':
     conn = StreamConn(
             ALPACA_API_KEY,
             ALPACA_SECRET_KEY,
-            base_url=URL('https://paper-api.alpaca.markets'),
+            base_url=URL('https://paper-api.alpaca.markets'),  # Use "https://api.alpaca.markets" for non-paper accounts.
             data_url=URL('https://data.alpaca.markets'),
             data_stream='polygon' if USE_POLYGON else 'alpacadatav1'
         )
